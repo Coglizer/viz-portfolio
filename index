@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualization Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            text-align: center;
+            background-color: white;
+            color: black;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .dark-mode {
+            background-color: #1e1e1e;
+            color: white;
+        }
+        .toggle-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: grey;
+            color: white;
+            border-radius: 5px;
+        }
+        .report {
+            margin-bottom: 50px;
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .report h2 {
+            text-align: center;
+        }
+        .report p {
+            font-size: 16px;
+            line-height: 1.6;
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .dark-mode .report p {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            margin-top: 10px;
+        }
+        .bio {
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: left;
+            font-size: 18px;
+            line-height: 1.6;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .dark-mode .bio {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <button class="toggle-button" onclick="toggleMode()">Switch to Dark Mode</button>
+    
+    <h1>Charles Coglizer Power BI Visualization Portfolio</h1>
+    
+    <div class="bio">
+        <p>Hi, I'm Charles Coglizer, a data-driven professional specializing in Power BI and data visualization. My expertise lies in transforming complex datasets into meaningful insights that drive business decisions. With a background in energy asset simulations, forecasting, and operational efficiency, I create intuitive, interactive reports that bring data to life. Welcome to my visualization portfolio!</p>
+    </div>
+    
+    <div class="report">
+        <h2>Energy Asset Simulation & Forecasting Report</h2>
+        <p>This Power BI report presents a stochastic simulated dataset encompassing various price, generation, and revenue scenarios. It includes key energy assets such as wind power, solar power, and load to provide a comprehensive view of market dynamics.</p>
+        <p>The primary objective of this report is to analyze critical metrics derived from the simulated data, enabling insightful decision-making for energy asset investments and forecasting. By leveraging statistical simulations, this report helps stakeholders assess risks, optimize portfolio strategies, and enhance energy market predictions.</p>
+        <iframe title="Defect Report" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiNzVlZmI4MGEtY2M1Zi00N2ZhLWE3N2MtYjFmYTNlYjNhM2YzIiwidCI6ImJhZjgyMThlLWIzMDItNDQ2NS1hOTkzLTRhMzljOTcyNTFiMiIsImMiOjF9" frameborder="0" allowFullScreen="true"></iframe>
+    </div>
+
+    <div class="report">
+        <h2>Manufacturing Quality & Production Analytics Report</h2>
+        <p>This Power BI report provides a comprehensive analysis of manufacturing data, including total production, defect counts, and defect types. It is designed to help identify trends, monitor quality, and optimize production efficiency.</p>
+        <iframe title="Defect Report" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiZDI2YTk0YzgtYzgyYS00YTc2LWI0NGUtNjZhMjNkMTdkNDkyIiwidCI6ImJhZjgyMThlLWIzMDItNDQ2NS1hOTkzLTRhMzljOTcyNTFiMiIsImMiOjF9" frameborder="0" allowFullScreen="true"></iframe>
+    </div>
+    
+    <script>
+        function toggleMode() {
+            const body = document.body;
+            const button = document.querySelector(".toggle-button");
+            body.classList.toggle("dark-mode");
+            if (body.classList.contains("dark-mode")) {
+                button.textContent = "Switch to Light Mode";
+            } else {
+                button.textContent = "Switch to Dark Mode";
+            }
+        }
+    </script>
+</body>
+</html>
